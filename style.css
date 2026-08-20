@@ -55,18 +55,20 @@ a {
     gap: 2rem;
 
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0.5rem;
+    left: 1rem;
 
-    width: 100%;
+    width: calc(100% - 2rem);
     height: 70px;
 
     padding: 2rem;
 
+    border-radius: 20px;
+
     background: rgba(24, 24, 24, 0.8);
     backdrop-filter: blur(20px);
     
-    border-bottom: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.5);
 
     z-index: 1000;
 }
@@ -87,7 +89,7 @@ a {
     width: 20px;
     height: 20px;
 
-    top: 25px;
+    top: calc(30px + 0.5rem);
     right: 2rem;
 
     transform: translate(-50%, -50%);
@@ -186,6 +188,42 @@ a {
     font-size: var(--step-3);
     font-family: var(--font-family-cursiv);
     color: var(--color-text-white)
+}
+
+.landing-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    padding: 2rem;
+}
+
+.landing-button{
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.landing-button:hover h1 {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.landing-button img{
+    filter: brightness(40%) blur(3px);
+}
+
+.landing-button h1{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100%;
+    text-align: center;
+
+    color: var(--color-text-gray);
+    font-size: var(--step-0);
+
+    transition: transform 0.1s ease;
 }
 
 .divider {
@@ -342,6 +380,18 @@ hr {
     color: rgb(78, 82, 164);
 }
 
+#wildlife-002 {
+    color: rgb(246, 220, 185);
+}
+
+#wildlife-003 {
+    color: rgb(127, 174, 205);
+}
+
+#wildlife-004 {
+    color: rgb(226, 255, 141);
+}
+
 #about-001 {
     color: rgb(236, 88, 127);
 }
@@ -405,8 +455,12 @@ hr {
         transition: opacity 0.5s ease 0s;
     }
 
-    .landing {
-        margin-top: 70px;
+    .landing-buttons {
+         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item {
+        flex-direction: column;
     }
 
     .gallery-item img{
@@ -421,10 +475,6 @@ hr {
 @media (max-width: 300px) {
     .navbar-logo{
         opacity: 0;
-    }
-
-    .gallery-item {
-        flex-direction: column;
     }
 }
 
