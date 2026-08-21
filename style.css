@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+
 body {
     font-family: var(--font-family-normal);
     line-height: 1.5;
@@ -36,7 +40,7 @@ body {
   --font-weight-3: 900;
 
   --font-family-normal: system-ui, sans-serif;
-  --font-family-cursiv: "Times-New-Roman", fantasy;
+  --font-family-cursive: "Dancing Script" !important;
 }
 
 img {
@@ -185,8 +189,9 @@ a {
 }
 
 .landing-text h2 {
-    font-size: var(--step-3);
-    font-family: var(--font-family-cursiv);
+    font-size: calc(var(--step-5) * 1.5);
+    font-weight: var(--font-weight-1);
+    font-family: var(--font-family-cursive);
     color: var(--color-text-white)
 }
 
@@ -290,7 +295,9 @@ hr {
 }
 
 .species {
-    font-family: var(--font-family-cursiv);
+    font-size: var(--step-1);
+    font-weight: var(--font-weight-1);
+    font-family: var(--font-family-cursive);
 }
 
 .scientific-name {
@@ -407,7 +414,7 @@ hr {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
     .navbar-toggle {
         display: block;
